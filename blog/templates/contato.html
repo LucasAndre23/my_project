@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Página de Contato{% endblock title %}
+
+
+{% block content %}
+    
+    <h2>Entre em Contato</h2>
+    
+    <p>Nosso telefone: <strong>{{ telefone }}</strong></p>
+    
+    <form>
+        <label for="nome">Seu Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br>
+        <button type="submit">Enviar</button>
+    </form>
+    
+{% endblock content %}

@@ -4,5 +4,7 @@ from . import views
 urlpatterns = [
     path("", views.hello),
     path("eco/<str:param>/",views.eco),
-    path("json",views.api_info)
+    path("json",views.api_info),
+    path("home/",views.home),
+    path("contato/", views.contato),
 ]

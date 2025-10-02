@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Página de inicio{% endblock title %}
+
+
+{% block content %}
+<body>
+    
+    <main>
+        <h1>Olá, {{usuario}}</h1>
+        <p> {{valor}}</p>
+        <p>Hoje é {{now}}</p>
+        <p>O dobro do valor é {{ valor|add:valor }}</p>
+
+
+        {% if is_logged_in == True%}
+            <p>Bem-vindo de volta!</p>
+        {% else %}
+            <p>Faça login para continuar.</p>
+        {% endif %}
+
+        {% if idade >= 18 %}
+            <p>Você é maior de idade.</p>
+        {% else %}
+            <p>Você é menor de idade.</p>
+        {% endif %}
+
+        {%if user_role == "admin"%}
+            <p>Você tem acesso total.</p>
+        {% else %}
+            <p>Você tem acesso limitado.</p>
+        
+        {% endif %}
+
+        <strong>Produtos : </strong>
+        <ul>
+            {% for produto in produtos %}
+                <li>
+                    {{forLoop.counter}} :{{produto}}
+                    {{ produto.nome }} - R$ {{ produto.preco }}
+                </li>
+            {% empty %}
+                <li>Nenhum produto disponível.</li>
+            {% endfor %}
+        
+        </ul>
+
+        
+        
+    </main>
+{% endblock content %}
