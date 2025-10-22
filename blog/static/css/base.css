@@ -1,0 +1,154 @@
+/* Reset básico para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #005f73;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do título no cabeçalho */
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Área principal */
+main {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos do formulário */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os campos do formulário */
+form p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Estilos para os botões */
+button[type="submit"] {
+    background-color: #008CBA;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Efeito de hover no botão */
+button[type="submit"]:hover {
+    background-color: #006f8e;
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Estilo para o rodapé para mostrar o ano */
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    form {
+        width: 90%;
+    }
+    button[type="submit"] {
+        font-size: 1rem;
+    }
+}
+
+/* Efeito de transição suave para os blocos e formulários */
+form, header, footer {
+    transition: all 0.3s ease;
+}
+
+/* Foco nos campos do formulário */
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #008CBA;
+}
+
+/* Sombra leve nos campos de entrada */
+input, textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+/* Estilo para o título da página */
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Customização da barra de navegação (se houver) */
+nav {
+    background-color: #005f73;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #008CBA;
+    border-radius: 5px;
+}

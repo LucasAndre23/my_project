@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Livro</title>
+</head>
+<body>
+    <h1>Editar Livro: {{ livro.titulo }}</h1>  <!-- Exibe o título do livro que está sendo editado -->
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'list_livros' %}">Voltar para a lista</a>
+</body>
+</html>
